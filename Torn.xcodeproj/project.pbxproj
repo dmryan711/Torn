@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		913308DE18C23D5C00B4F88A /* TornFacebookPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 913308DD18C23D5C00B4F88A /* TornFacebookPermissions.m */; };
+		913308E118C3C2C300B4F88A /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 913308E018C3C2C300B4F88A /* AMBlurView.m */; };
 		91BF0BD818BF7CE700B9010E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BF0BD718BF7CE700B9010E /* Foundation.framework */; };
 		91BF0BDA18BF7CE700B9010E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BF0BD918BF7CE700B9010E /* CoreGraphics.framework */; };
 		91BF0BDC18BF7CE700B9010E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BF0BDB18BF7CE700B9010E /* UIKit.framework */; };
@@ -58,7 +60,6 @@
 		91BF0C6F18BFCF5C00B9010E /* UITabBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BF0C5A18BFCF5C00B9010E /* UITabBar+FlatUI.m */; };
 		91BF0C7018BFCF5C00B9010E /* UITableViewCell+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BF0C5C18BFCF5C00B9010E /* UITableViewCell+FlatUI.m */; };
 		91BF0C7118BFCF5C00B9010E /* UIToolbar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BF0C5E18BFCF5C00B9010E /* UIToolbar+FlatUI.m */; };
-		91BF0C7418BFD25B00B9010E /* TornMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BF0C7318BFD25B00B9010E /* TornMainTableViewController.m */; };
 		91BF0C8018BFE0E100B9010E /* Lato-Bla.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91BF0C7618BFE0E100B9010E /* Lato-Bla.otf */; };
 		91BF0C8118BFE0E100B9010E /* Lato-BlaIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91BF0C7718BFE0E100B9010E /* Lato-BlaIta.otf */; };
 		91BF0C8218BFE0E100B9010E /* Lato-Bol.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91BF0C7818BFE0E100B9010E /* Lato-Bol.otf */; };
@@ -92,6 +93,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		913308DC18C23D5C00B4F88A /* TornFacebookPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TornFacebookPermissions.h; sourceTree = "<group>"; };
+		913308DD18C23D5C00B4F88A /* TornFacebookPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TornFacebookPermissions.m; sourceTree = "<group>"; };
+		913308DF18C3C2C300B4F88A /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMBlurView.h; path = ../AMBlurView.h; sourceTree = "<group>"; };
+		913308E018C3C2C300B4F88A /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMBlurView.m; path = ../AMBlurView.m; sourceTree = "<group>"; };
 		91BF0BD418BF7CE700B9010E /* Torn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Torn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BF0BD718BF7CE700B9010E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		91BF0BD918BF7CE700B9010E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,8 +176,6 @@
 		91BF0C5C18BFCF5C00B9010E /* UITableViewCell+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FlatUI.m"; sourceTree = "<group>"; };
 		91BF0C5D18BFCF5C00B9010E /* UIToolbar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+FlatUI.h"; sourceTree = "<group>"; };
 		91BF0C5E18BFCF5C00B9010E /* UIToolbar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+FlatUI.m"; sourceTree = "<group>"; };
-		91BF0C7218BFD25B00B9010E /* TornMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TornMainTableViewController.h; sourceTree = "<group>"; };
-		91BF0C7318BFD25B00B9010E /* TornMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TornMainTableViewController.m; sourceTree = "<group>"; };
 		91BF0C7618BFE0E100B9010E /* Lato-Bla.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bla.otf"; sourceTree = "<group>"; };
 		91BF0C7718BFE0E100B9010E /* Lato-BlaIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlaIta.otf"; sourceTree = "<group>"; };
 		91BF0C7818BFE0E100B9010E /* Lato-Bol.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bol.otf"; sourceTree = "<group>"; };
@@ -355,8 +358,6 @@
 				91BF0C2D18BFAC9B00B9010E /* TornLoginViewController.m */,
 				91BF0BEC18BF7CE700B9010E /* TornViewController.h */,
 				91BF0BED18BF7CE700B9010E /* TornViewController.m */,
-				91BF0C7218BFD25B00B9010E /* TornMainTableViewController.h */,
-				91BF0C7318BFD25B00B9010E /* TornMainTableViewController.m */,
 				91BF0C9718C0057000B9010E /* TornMyTornTableViewController.h */,
 				91BF0C9818C0057000B9010E /* TornMyTornTableViewController.m */,
 				91BF0C8D18BFEA9200B9010E /* All Torns */,
@@ -367,6 +368,8 @@
 		91BF0C3718BFCF5C00B9010E /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				913308DF18C3C2C300B4F88A /* AMBlurView.h */,
+				913308E018C3C2C300B4F88A /* AMBlurView.m */,
 				91BF0C3818BFCF5C00B9010E /* FlatUIKit.h */,
 				91BF0C3918BFCF5C00B9010E /* FUIAlertView.h */,
 				91BF0C3A18BFCF5C00B9010E /* FUIAlertView.m */,
@@ -432,8 +435,6 @@
 			children = (
 				91BF0CAB18C1104A00B9010E /* Torns */,
 				91BF0CAA18C1103E00B9010E /* Torn Detail */,
-				91BF0C9D18C0259400B9010E /* TornOneDetailViewController.h */,
-				91BF0C9E18C0259400B9010E /* TornOneDetailViewController.m */,
 			);
 			name = "All Torns";
 			sourceTree = "<group>";
@@ -454,6 +455,8 @@
 		91BF0CAA18C1103E00B9010E /* Torn Detail */ = {
 			isa = PBXGroup;
 			children = (
+				91BF0C9D18C0259400B9010E /* TornOneDetailViewController.h */,
+				91BF0C9E18C0259400B9010E /* TornOneDetailViewController.m */,
 			);
 			name = "Torn Detail";
 			sourceTree = "<group>";
@@ -463,6 +466,8 @@
 			children = (
 				91BF0C8A18BFEA8800B9010E /* TornOneViewController.h */,
 				91BF0C8B18BFEA8800B9010E /* TornOneViewController.m */,
+				913308DC18C23D5C00B4F88A /* TornFacebookPermissions.h */,
+				913308DD18C23D5C00B4F88A /* TornFacebookPermissions.m */,
 				91BF0C8E18BFEAAE00B9010E /* TornTwoViewController.h */,
 				91BF0C8F18BFEAAE00B9010E /* TornTwoViewController.m */,
 				91BF0C9118BFEABC00B9010E /* TornThreeViewController.h */,
@@ -600,6 +605,7 @@
 				91BF0C7018BFCF5C00B9010E /* UITableViewCell+FlatUI.m in Sources */,
 				91BF0C9C18C012EB00B9010E /* MyTornCell.m in Sources */,
 				91BF0C6F18BFCF5C00B9010E /* UITabBar+FlatUI.m in Sources */,
+				913308DE18C23D5C00B4F88A /* TornFacebookPermissions.m in Sources */,
 				91BF0C9618BFEAC900B9010E /* TornFourViewController.m in Sources */,
 				91BF0C6918BFCF5C00B9010E /* UIImage+FlatUI.m in Sources */,
 				91BF0C9918C0057000B9010E /* TornMyTornTableViewController.m in Sources */,
@@ -607,8 +613,8 @@
 				91BF0C6E18BFCF5C00B9010E /* UIStepper+FlatUI.m in Sources */,
 				91BF0C6418BFCF5C00B9010E /* FUISwitch.m in Sources */,
 				91BF0CA718C1026800B9010E /* UIImage+AlphaAdditions.m in Sources */,
-				91BF0C7418BFD25B00B9010E /* TornMainTableViewController.m in Sources */,
 				91BF0C6B18BFCF5C00B9010E /* UIPopoverController+FlatUI.m in Sources */,
+				913308E118C3C2C300B4F88A /* AMBlurView.m in Sources */,
 				91BF0C6218BFCF5C00B9010E /* FUIPopoverBackgroundView.m in Sources */,
 				91BF0C6A18BFCF5C00B9010E /* UINavigationBar+FlatUI.m in Sources */,
 				91BF0C8C18BFEA8800B9010E /* TornOneViewController.m in Sources */,

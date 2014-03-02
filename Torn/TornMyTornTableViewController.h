@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 Devon Ryan. All rights reserved.
 //
 
+#import "FUIAlertView.h"
 #import <Parse/Parse.h>
 
-@interface TornMyTornTableViewController : PFQueryTableViewController
+@interface TornMyTornTableViewController : PFQueryTableViewController <FUIAlertViewDelegate>
 
 @end

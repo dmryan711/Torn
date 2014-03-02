@@ -8,7 +8,6 @@
 
 
 #import "TornAppDelegate.h"
-#import "TornMainTableViewController.h"
 #import "TornLoginViewController.h"
 #import "TornViewController.h"
 #import "TornConstants.h"
@@ -52,7 +51,13 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
-    
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor cloudsColor],
+       //NSShadowAttributeName:[NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
+      // NSShadowAttributeName:[UIColor whiteColor],
+       NSFontAttributeName:[UIFont fontWithName:@"Lato-Bold" size:16]
+       }
+                                                                                            forState:UIControlStateNormal];
     
     // Override point for customization after application launch.
     return YES;

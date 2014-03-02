@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet FUIButton *buttonThree;
 @property (weak, nonatomic) IBOutlet FUIButton *buttonFour;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) UITapGestureRecognizer *tapGesture;
 
 @end
 
@@ -38,6 +39,9 @@
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor pomegranateColor]];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logOut)];
+    
+    self.view.userInteractionEnabled = YES;
+    
     
     self.navigationController.navigationBar.tintColor = [UIColor cloudsColor];
     
@@ -62,6 +66,7 @@
     self.buttonFour.titleLabel.font = [UIFont fontWithName:@"Lato-Blalta" size:20];
     
     self.titleLabel.font = [UIFont fontWithName:@"Lato-Black" size:24];
+    self.titleLabel.textColor = [UIColor blackColor];
     
    
     
@@ -83,7 +88,7 @@
     
     
     
-    self.view.backgroundColor  =[UIColor concreteColor];
+    self.view.backgroundColor  =[UIColor cloudsColor];
     
 
     
@@ -102,5 +107,6 @@
     [APPLICATION_DELEGATE logOutUser];
 
 }
+
 
 @end

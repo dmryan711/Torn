@@ -23,6 +23,8 @@
 @property (strong, nonatomic) NSData *dataOfImage;
 @property (strong, nonatomic) IBOutlet UIProgressView *imageLoad;
 @property (weak, nonatomic) IBOutlet UITextField *tornNameTextField;
+@property (strong, nonatomic) UIImage *imageOne;
+@property  (strong, nonatomic) NSMutableDictionary  *postParams;
 @end
 
 @implementation TornOneViewController
@@ -30,11 +32,9 @@
 -(void)awakeFromNib
 {
     [PFImageView class];
-    NSLog(@"View One");
 
 
     
-    NSLog(@"Wakey Load");
 
 }
 
@@ -51,7 +51,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"View Did Load");
     
     self.tornNameTextField.delegate = self;
     
@@ -71,7 +70,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Submit" style:UIBarButtonItemStyleBordered target:self action:@selector(submitTorn)];
     
     self.imageLoad.hidden = YES;
-    [self.imageLoad configureFlatProgressViewWithTrackColor:[UIColor silverColor] progressColor:[UIColor greenSeaColor]];
+    [self.imageLoad configureFlatProgressViewWithTrackColor:[UIColor silverColor] progressColor:[UIColor pomegranateColor]];
     self.photoChoice.backgroundColor = [UIColor silverColor];
     
 }
@@ -173,6 +172,12 @@
         }
         self.dataOfImage  = UIImageJPEGRepresentation([info objectForKey:UIImagePickerControllerOriginalImage], 0.5);
         
+        if (!_imageOne) {
+            _imageOne = [[UIImage alloc]init];
+        }
+        
+        self.imageOne = [UIImage imageWithData:self.dataOfImage];
+        
         //Set Image Locally & Animate Progress Bar
         self.imageFile = [PFFile fileWithData:self.dataOfImage];
         [self.imageFile saveInBackgroundWithBlock:^(BOOL succeeded , NSError *error){
@@ -235,6 +240,7 @@
         [TornUtility saveTornWithType:TornTypeSingle withName:self.tornName atTimeStamp:[NSDate date]  withPhotoOneFile:self.imageFile withPhotoTwoFile:nil withPhotoThreeFile:nil withPhotoFourFile:nil];
         
         [self createSubmissionSuccess];
+        [self changeSessionWithPublishPermission];
         [self.navigationController popToRootViewControllerAnimated:YES];
         
     }else{// Create Alert
@@ -258,5 +264,79 @@
     
 }
 
+
+- (void)changeSessionWithPublishPermission{
+    
+    if ([FBSession.activeSession.permissions indexOfObject:@"publish_actions"] == NSNotFound) {
+        // permission does not exist
+        NSArray *permissions = [NSArray arrayWithObjects:@"publish_actions", nil];
+        
+        [FBSession.activeSession requestNewPublishPermissions:permissions
+                                              defaultAudience:FBSessionDefaultAudienceFriends
+                                            completionHandler:
+         ^(FBSession *session,
+           NSError *error){
+             if (!error) {
+                 
+                 //Publish
+                 [self post];
+             }
+         }];
+    }else{
+        //Publish
+        [self post];
+    }
+    
+}
+
+-(void)post
+{
+    NSLog(@"Creating Post");
+    
+        //Catch All
+
+    self.postParams[@"message"] = [NSString stringWithFormat:@"Torn Up"];
+    
+    //Publish
+    [self publishStory];
+}
+
+- (void)publishStory
+{
+    [FBRequestConnection
+     startWithGraphPath:@"me/feed"
+     parameters:self.postParams
+     HTTPMethod:@"POST"
+     completionHandler:^(FBRequestConnection *connection,
+                         id result,
+                         NSError *error) {
+         NSString *alertText;
+         if (error) {
+             NSLog(@"Error %@",error);
+             alertText = @"Sorry, There was an error posting your stats to Facebook";
+         } else {
+             alertText = @"MDP Stats posted!";
+         }
+         
+         NSLog(@"Posted");
+         // Show the result in an alert
+         
+        FUIAlertView *postAlert = [[FUIAlertView alloc] initWithTitle:@"Post Result" message:alertText delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil];
+         
+         postAlert.titleLabel.textColor = [UIColor cloudsColor];
+         //postAlert.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+         postAlert.messageLabel.textColor = [UIColor cloudsColor];
+         //postAlert.messageLabel.font = [UIFont flatFontOfSize:14];
+         postAlert.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
+         postAlert.alertContainer.backgroundColor = [UIColor midnightBlueColor];
+         postAlert.defaultButtonColor = [UIColor amethystColor];
+         postAlert.defaultButtonShadowColor = [UIColor wisteriaColor];
+         //postAlert.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
+         postAlert.defaultButtonTitleColor = [UIColor cloudsColor];
+         
+         [postAlert show];
+         
+     }];
+}
 
 @end

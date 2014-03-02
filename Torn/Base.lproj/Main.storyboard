@@ -15,8 +15,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="j25-7w-g8D" kind="relationship" relationship="viewControllers" id="gco-JX-UjI"/>
                         <segue destination="UeY-eB-4DI" kind="relationship" relationship="viewControllers" id="Anf-sG-Cis"/>
+                        <segue destination="j25-7w-g8D" kind="relationship" relationship="viewControllers" id="gco-JX-UjI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pho-iW-2Ho" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -42,7 +42,7 @@
         <!--Torn View Controller - Torn-->
         <scene sceneID="HuA-Ab-QsJ">
             <objects>
-                <viewController id="Fmm-1G-Dpg" customClass="TornViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tornMenu" id="Fmm-1G-Dpg" customClass="TornViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HpX-d3-0kJ"/>
                         <viewControllerLayoutGuide type="bottom" id="BTj-YV-Szf"/>
